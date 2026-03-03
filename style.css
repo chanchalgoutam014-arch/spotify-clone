@@ -1,0 +1,50 @@
+body{
+    background-color: black;
+    margin: 0px;
+    padding: 0px;
+}
+
+.containor{
+    border: 2px solid red;
+   
+}
+
+.left{
+    border: 2px solid red;
+    width: 27vw;
+    height: 78vh;
+    margin: 4px;
+}
+
+.mid{
+    border: 2px solid red;
+    width: 53vw;
+     height: 78vh;
+    margin: 4px;
+}
+
+.right{
+     border: 2px solid red;
+    width: 19vw;
+    height: 78vh;
+    margin: 4px;
+}
+
+.head{
+    border: 2px solid blue;
+    height: 9vh;
+}
+
+.logo{
+    margin-left: 25px;
+}
+.home{
+    background-color: #1f1f1f;
+    border-radius: 55%;
+    padding: 3%;
+}
+.search{
+     background-color: #1f1f1f;
+     padding: 3%;
+     border-radius: 20%;
+}
