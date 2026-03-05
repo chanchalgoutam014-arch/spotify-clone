@@ -1,43 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spotify-web page:Music for everyone</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="utility.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="utility.css" />
 </head>
 
 <body>
     <header class="header flex items">
         <div class="leftside flex items">
-            <div class="logo flex items"><img src="logo.svg" alt="Spotify"></div>
+            <div class="logo flex items"><img src="logo.svg" alt="Spotify" /></div>
             <button class="home">
-                <div><img src="home.svg" alt="Home"></div>
+                <div><img src="home.svg" alt="Home" /></div>
             </button>
         </div>
         <div class="search flex items">
-            <img src="search.svg" alt="search">
-            <input type="text" name="search" id="search" placeholder="What do you want to play?">
+            <img src="search.svg" alt="search" />
+            <input class="write" type="text" name="search" id="search" placeholder="What do you want to play?" />
             <button class="folder">
-                <img src="folder.svg" alt="folder">
+                <img src="folder.svg" alt="folder" />
             </button>
         </div>
-        <div class="rightside flex items">
-            <div class="install flex"><img src="install.svg" alt="install"></div>
-            <div class="notifi flex"><img src="notifi.svg" alt="notification"></div>
-            <div class="add flex"><img src="pub.svg" alt="add people"></div>
-            <div class="profile flex"></div>
+        <div class="options flex items">
+            <button>Premium</button>
+            <button>Support</button>
+            <button>Download</button>
         </div>
-        <div class="explor flex items">
-            <button type="button">Explore Premium</button>
+        <div class="rightside flex items">
+            <div class="install flex">
+                <button class="int flex items">
+                    <img style="opacity: 70%;" src="install.svg" alt="install" />Install App</button>
+            </div>
         </div>
     </header>
     <div class="containor flex">
         <div class="left"></div>
         <div class="mid"></div>
-        <div class="right"></div>
     </div>
 </body>
 
