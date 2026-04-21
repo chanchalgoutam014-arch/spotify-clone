@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Spotify - Web page : Music for everyone</title>
+    <title>Spotify - Web Player : Music for everyone</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="utility.css" />
+    <link rel="icon" type="image/x-icon" href="favicon (1).ico">
 </head>
 
 <body>
-    <header class="header flex items">
+    <header class="header1 flex items">
         <div class="leftside flex items">
             <div class="logo flex items"><img src="logo.svg" alt="Spotify" /></div>
             <button class="home">
@@ -42,9 +43,164 @@
         </div>
     </header>
     <div class="containor flex">
-        <div class="left"></div>
-        <div class="mid"></div>
+        <div class="left">
+            <div class="panel">
+
+                <!-- Header -->
+                <div class="header">
+                    <h1>Your Library</h1>
+                    <button class="create-btn">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                            <path d="M7 1v12M1 7h12" stroke="white" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                        Create
+                    </button>
+                </div>
+
+                <!-- Scrollable Area -->
+                <div class="scroll-area">
+
+                    <!-- Card 1: Playlist -->
+                    <div class="card">
+                        <h2>Create your first playlist</h2>
+                        <p>It's easy, we'll help you</p>
+                        <button class="card-btn">Create playlist</button>
+                    </div>
+
+                    <!-- Card 2: Podcasts -->
+                    <div class="card">
+                        <h2>Let's find some podcasts to follow</h2>
+                        <p>We'll keep you updated on new episodes</p>
+                        <button class="card-btn">Browse podcasts</button>
+                    </div>
+                </div>
+                <footer class="footer">
+                    <div class="footer-links">
+                        <a href="#">Legal</a>
+                        <a href="#">Safety & Privacy Center</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Cookies</a>
+                    </div>
+
+                    <div class="footer-links">
+                        <a href="#">About Ads</a>
+                        <a href="#">Accessibility</a>
+                    </div>
+
+                    <div class="footer-title">
+                        Cookies
+                    </div>
+                </footer>
+                <button class="lang-btn"><svg width="19px" height="19px" viewBox="0 0 48.00 48.00"
+                        xmlns="http://www.w3.org/2000/svg" fill="#ffffff">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC"
+                            stroke-width="0.288"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path d="M0 0h48v48H0z" fill="none"></path>
+                            <g id="Shopicon">
+                                <path
+                                    d="M24,4C12.954,4,4,12.954,4,24s8.954,20,20,20c11.046,0,20-8.954,20-20S35.046,4,24,4z M31.96,22 c-0.208-5.225-1.223-9.846-2.726-13.103c5.649,1.964,9.861,6.998,10.627,13.103H31.96z M24,39.9 c-1.213-0.955-3.608-5.736-3.954-13.9h7.908C27.608,34.164,25.213,38.945,24,39.9z M20.046,22C20.392,13.836,22.787,9.055,24,8.1 c1.213,0.955,3.608,5.736,3.954,13.9H20.046z M18.766,8.897C17.264,12.154,16.248,16.775,16.04,22H8.139 C8.905,15.896,13.117,10.861,18.766,8.897z M16.04,26c0.208,5.225,1.223,9.846,2.726,13.103C13.117,37.139,8.905,32.104,8.139,26 H16.04z M29.234,39.103c1.502-3.257,2.518-7.878,2.726-13.103h7.902C39.095,32.104,34.883,37.139,29.234,39.103z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
+                    English</button>
+            </div>
+        </div>
+        <div class="mid">
+            <div class="songs">
+                <div class="tranding">
+                    <h1>Tranding songs</h1>
+                </div>
+                <div class="playlist">
+                    <div class="cardlist">
+                        <button class="scroll-arrow left-arrow" id="scroll-left"><</button>
+                        <img src="playlists/pic1.jpg" alt="Playlist 1" />
+                        <div class="play-button"></div>
+                        <a href="#"><h2>Majboor</h2></a>
+                        <a href="#"><p>Shereryar Rehan,</a>
+                            <a href="#"><br>Zoha Waseem</p></a>
+                    </div>
+                    <div class="cardlist">
+                        <img src="playlists/pic2.jpg" alt="Playlist 2" />
+                        <div class="play-button"></div>
+                        <a href="#"><h2>न</h2></a>
+                        <a href="#"><p>Seedhe Maut</p></a>
+                    </div>
+                    <div class="cardlist">
+                        <img src="playlists/pic3.jpg" alt="Playlist 3" />
+                        <div class="play-button"></div>
+                        <a href="#"><h2>ARIRANG</h2></a>
+                        <a href="#"><p>BTS</p></a>
+                    </div>
+                    <div class="cardlist">
+                        <img src="playlists/pic4.jpg" alt="Playlist 3" />
+                        <div class="play-button"></div>
+                        <a href="#"><h2>Open Letter</h2></a>
+                        <a href="#"><p>Talha Anjum</p></a>
+                    </div>
+                    <div class="cardlist">
+                        <img src="playlists/pic5.jpg" alt="Playlist 3" />
+                        <div class="play-button"></div>
+                        <a href="#"><h2>Yours Truly</h2></a>
+                        <a href="#"><p>KR$NA</p></a>
+                    </div>
+
+
+                    <div class="cardlist">
+                        <img src="playlists/pic6.jpg" alt="Playlist 3" />
+                        <div class="play-button"></div>
+                        <a href="#"><h2>Lunch Break</h2></a>
+                        <a href="#"><p>Seedhe Maut</p></a>
+                    </div>
+                    <div class="cardlist">
+                        <img src="playlists/pic7.jpg" alt="Playlist 3" />
+                        <div class="play-button"></div>
+                        <a href="#"><h2>Sawaal - Acoustic</h2></a>
+                        <a href="#"><p>Abhijeet Srivastava, 
+                            <a href="#">Siddhant Bhosle</a>, 
+                            <a href="#">Shayra Apoorva</a></p></a>
+                    </div>
+                    <div class="cardlist">
+                        <img src="playlists/pic8.jpg" alt="Playlist 3" />
+                        <div class="play-button"></div>
+                        <a href="#"><h2>P-POP CULTURE</h2></a>
+                        <p>Album • <a href="#">Karan Aujla,</a>
+                            <a href="#">ikky</p></a>
+                    </div>
+                    <div class="cardlist">
+                        <img src="playlists/pic9.jpg" alt="Playlist 3" />
+                        <div class="play-button"></div>
+                        <a href="#"><h2>Maruti</h2></a>
+                        <a href="#"><p>Dhanda Nyoliwala,
+                            <a href="#"></a> Ron Likhari, 
+                            <a href="#"></a>Miki Malang</p></a>
+                    </div>
+                    <div class="cardlist">
+                        <img src="playlists/pic10.jpg" alt="Playlist 3" />
+                        <div class="play-button"></div>
+                        <a href="#"><h2>Piya Ghar Aaya - Remix</h2></a>
+                        <a href="#"><p>Asad Khan,
+                            <a href="#"></a> Nusrat Fateh Ali Khan</p></a>
+                    </div>
+                    <button class="scroll-arrow right" id="scroll-right">></button>
+                </div>
+
+            </div>
+        </div>
     </div>
+    <div class="signup">
+        <div class="temp">
+            <div>
+                <b>Preview of Spotify</b>
+                <p>Sign up to get unlimited songs and podcasts with occasional ads. No credit card needed.</p>
+            </div>
+
+            <button class="btn">Sign up for free</button>
+        </div>
+    </div>
+    <script src="home.js"></script>
 </body>
 
 </html>
