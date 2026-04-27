@@ -1,13 +1,28 @@
 document.querySelectorAll('.scroll-area').forEach((scrollArea) => {
   let timeout;
 
-  scrollArea.addEventListener('scroll', () => {
-    scrollArea.classList.add('scrolling');
+  const hideScrollbar = () => {
+    scrollArea.classList.remove('scrolling');
+  };
 
+  const resetTimeout = () => {
+    scrollArea.classList.add('scrolling');
     clearTimeout(timeout);
-    timeout = setTimeout(() => {
-      scrollArea.classList.remove('scrolling');
-    }, 3000);
+    timeout = setTimeout(hideScrollbar, 3000);
+  };
+
+  // Trigger hide on scroll
+  scrollArea.addEventListener('scroll', resetTimeout);
+
+  // Keep visible while hovering
+  scrollArea.addEventListener('mouseenter', () => {
+    clearTimeout(timeout);
+    scrollArea.classList.add('scrolling');
+  });
+
+  scrollArea.addEventListener('mouseleave', () => {
+    clearTimeout(timeout);
+    timeout = setTimeout(hideScrollbar, 3000);
   });
 });
 
@@ -37,7 +52,7 @@ function updateScrollButtons() {
 }
 
 function scrollPlaylist(direction) {
-  const scrollAmount = 300; // Adjust scroll amount as needed
+  const scrollAmount = 500; // Adjust scroll amount as needed
   const currentScroll = playlist.scrollLeft;
   const targetScroll = direction === 'left'
     ? currentScroll - scrollAmount

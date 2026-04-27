@@ -4,25 +4,28 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Spotify - Web Player : Music for everyone</title>
+    <title>Spotify - Web Player</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="utility.css" />
-    <link rel="icon" type="image/x-icon" href="favicon (1).ico">
+    <link rel="icon" type="image/x-icon" href="playlists/favicon (1).ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header class="header1 flex items">
         <div class="leftside flex items">
-            <div class="logo flex items"><img src="logo.svg" alt="Spotify" /></div>
+            <div class="logo flex items"><img src="playlists/logo.svg" alt="Spotify" /></div>
             <button class="home">
-                <div><img src="home.svg" alt="Home" /></div>
+                <div><img src="playlists/home.svg" alt="Home" /></div>
             </button>
         </div>
         <div class="search flex items">
-            <img src="search.svg" alt="search" />
+            <img src="playlists/search.svg" alt="search" />
             <input class="write" type="text" name="search" id="search" placeholder="What do you want to play?" />
             <button class="folder">
-                <img src="folder.svg" alt="folder" />
+                <img src="playlists/folder.svg" alt="folder" />
             </button>
         </div>
         <div class="options flex items">
@@ -33,7 +36,7 @@
         <div class="rightside flex items">
             <div class="install flex">
                 <button class="int flex items">
-                    <img style="opacity: 70%;" src="install.svg" alt="install" />Install App
+                    <img style="opacity: 70%;" src="playlists/install.svg" alt="install" />Install App
                 </button>
                 <button>Sign up</button>
             </div>
@@ -110,81 +113,156 @@
         </div>
         <div class="mid">
             <div class="songs">
-                <div class="tranding">
-                    <h1>Tranding songs</h1>
+                <div class="PA">
+                    <a href="#"><h1>Tranding songs</h1></a>
                 </div>
                 <div class="playlist">
+                    <button class="scroll-arrow left-arrow" id="scroll-left">
+                        <svg data-encore-id="icon" role="img" aria-hidden="true" class="e-10310-icon"
+                            viewBox="0 0 16 16"
+                            style=" fill: white; height: 16px; width: 16px;">
+                            <path
+                                d="M11.03.47a.75.75 0 0 1 0 1.06L4.56 8l6.47 6.47a.75.75 0 1 1-1.06 1.06L2.44 8 9.97.47a.75.75 0 0 1 1.06 0">
+                            </path>
+                        </svg>
+                    </button>
                     <div class="cardlist">
-                        <button class="scroll-arrow left-arrow" id="scroll-left"><</button>
                         <img src="playlists/pic1.jpg" alt="Playlist 1" />
                         <div class="play-button"></div>
-                        <a href="#"><h2>Majboor</h2></a>
-                        <a href="#"><p>Shereryar Rehan,</a>
-                            <a href="#"><br>Zoha Waseem</p></a>
+                        <a href="#">
+                            <h2>Majboor</h2>
+                        </a>
+                        <a href="#">
+                            <p>Shereryar Rehan,
+                        </a>
+                        <a href="#"><br>Zoha Waseem</p></a>
                     </div>
                     <div class="cardlist">
                         <img src="playlists/pic2.jpg" alt="Playlist 2" />
                         <div class="play-button"></div>
-                        <a href="#"><h2>न</h2></a>
-                        <a href="#"><p>Seedhe Maut</p></a>
+                        <a href="#">
+                            <h2>न</h2>
+                        </a>
+                        <a href="#">
+                            <p>Seedhe Maut</p>
+                        </a>
                     </div>
                     <div class="cardlist">
                         <img src="playlists/pic3.jpg" alt="Playlist 3" />
                         <div class="play-button"></div>
-                        <a href="#"><h2>ARIRANG</h2></a>
-                        <a href="#"><p>BTS</p></a>
+                        <a href="#">
+                            <h2>ARIRANG</h2>
+                        </a>
+                        <a href="#">
+                            <p>BTS</p>
+                        </a>
                     </div>
                     <div class="cardlist">
                         <img src="playlists/pic4.jpg" alt="Playlist 3" />
                         <div class="play-button"></div>
-                        <a href="#"><h2>Open Letter</h2></a>
-                        <a href="#"><p>Talha Anjum</p></a>
+                        <a href="#">
+                            <h2>Open Letter</h2>
+                        </a>
+                        <a href="#">
+                            <p>Talha Anjum</p>
+                        </a>
                     </div>
                     <div class="cardlist">
                         <img src="playlists/pic5.jpg" alt="Playlist 3" />
                         <div class="play-button"></div>
-                        <a href="#"><h2>Yours Truly</h2></a>
-                        <a href="#"><p>KR$NA</p></a>
+                        <a href="#">
+                            <h2>Yours Truly</h2>
+                        </a>
+                        <a href="#">
+                            <p>KR$NA</p>
+                        </a>
                     </div>
 
 
                     <div class="cardlist">
                         <img src="playlists/pic6.jpg" alt="Playlist 3" />
                         <div class="play-button"></div>
-                        <a href="#"><h2>Lunch Break</h2></a>
-                        <a href="#"><p>Seedhe Maut</p></a>
+                        <a href="#">
+                            <h2>Lunch Break</h2>
+                        </a>
+                        <a href="#">
+                            <p>Seedhe Maut</p>
+                        </a>
                     </div>
                     <div class="cardlist">
                         <img src="playlists/pic7.jpg" alt="Playlist 3" />
                         <div class="play-button"></div>
-                        <a href="#"><h2>Sawaal - Acoustic</h2></a>
-                        <a href="#"><p>Abhijeet Srivastava, 
-                            <a href="#">Siddhant Bhosle</a>, 
-                            <a href="#">Shayra Apoorva</a></p></a>
+                        <a href="#">
+                            <h2>Sawaal - Acoustic</h2>
+                        </a>
+                        <a href="#">
+                            <p>Abhijeet Srivastava,
+                                <a href="#">Siddhant Bhosle</a>,
+                                <a href="#">Shayra Apoorva</a>
+                            </p>
+                        </a>
                     </div>
                     <div class="cardlist">
                         <img src="playlists/pic8.jpg" alt="Playlist 3" />
                         <div class="play-button"></div>
-                        <a href="#"><h2>P-POP CULTURE</h2></a>
+                        <a href="#">
+                            <h2>P-POP CULTURE</h2>
+                        </a>
                         <p>Album • <a href="#">Karan Aujla,</a>
-                            <a href="#">ikky</p></a>
+                            <a href="#">ikky
+                        </p></a>
                     </div>
                     <div class="cardlist">
                         <img src="playlists/pic9.jpg" alt="Playlist 3" />
                         <div class="play-button"></div>
-                        <a href="#"><h2>Maruti</h2></a>
-                        <a href="#"><p>Dhanda Nyoliwala,
-                            <a href="#"></a> Ron Likhari, 
-                            <a href="#"></a>Miki Malang</p></a>
+                        <a href="#">
+                            <h2>Maruti</h2>
+                        </a>
+                        <a href="#">
+                            <p>Dhanda Nyoliwala,
+                                <a href="#"></a> Ron Likhari,
+                                <a href="#"></a>Miki Malang
+                            </p>
+                        </a>
                     </div>
                     <div class="cardlist">
                         <img src="playlists/pic10.jpg" alt="Playlist 3" />
                         <div class="play-button"></div>
-                        <a href="#"><h2>Piya Ghar Aaya - Remix</h2></a>
-                        <a href="#"><p>Asad Khan,
-                            <a href="#"></a> Nusrat Fateh Ali Khan</p></a>
+                        <a href="#">
+                            <h2>Piya Ghar Aaya - Remix</h2>
+                        </a>
+                        <a href="#">
+                            <p>Asad Khan,
+                                <a href="#"></a> Nusrat Fateh Ali Khan
+                            </p>
+                        </a>
                     </div>
-                    <button class="scroll-arrow right" id="scroll-right">></button>
+                    <button class="scroll-arrow right" id="scroll-right">
+                        <svg data-encore-id="icon" role="img" aria-hidden="true" class="e-10310-icon"
+                            viewBox="0 0 16 16"
+                            style="fill: white; height: 16px; width: 16px;">
+                            <path
+                                d="M4.97.47a.75.75 0 0 0 0 1.06L11.44 8l-6.47 6.47a.75.75 0 1 0 1.06 1.06L13.56 8 6.03.47a.75.75 0 0 0-1.06 0">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+
+            </div>
+            <div class="artists">
+                <div class="PA">
+                    <a href="#"><h1>Popular artists</h1></a>
+                </div>
+                <div class="playlist">
+                    <button class="scroll-arrow left-arrow" id="scroll-left">
+                        <svg data-encore-id="icon" role="img" aria-hidden="true" class="e-10310-icon"
+                            viewBox="0 0 16 16"
+                            style=" fill: white; height: 16px; width: 16px;">
+                            <path
+                                d="M11.03.47a.75.75 0 0 1 0 1.06L4.56 8l6.47 6.47a.75.75 0 1 1-1.06 1.06L2.44 8 9.97.47a.75.75 0 0 1 1.06 0">
+                            </path>
+                        </svg>
+                    </button>
                 </div>
 
             </div>
