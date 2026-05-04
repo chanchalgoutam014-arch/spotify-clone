@@ -1,76 +1,49 @@
-document.querySelectorAll('.scroll-area').forEach((scrollArea) => {
-  let timeout;
+document.querySelectorAll('.section').forEach((section) => {
+  // Find the scrollable container
+  // Priority: .scroll-container > .artists-container > .section itself
+  const scrollContainer = section.querySelector('.scroll-container');
+  const artistContainer = section.querySelector('.artists-container');
+  const container = scrollContainer || artistContainer || section;
+  
+  // Get the button pair for this specific section
+  const leftBtn = section.querySelector('.scroll-arrow.left-arrow');
+  const rightBtn = section.querySelector('.scroll-arrow.right');
 
-  const hideScrollbar = () => {
-    scrollArea.classList.remove('scrolling');
-  };
+  // Skip if buttons are missing
+  if (!leftBtn || !rightBtn) return;
 
-  const resetTimeout = () => {
-    scrollArea.classList.add('scrolling');
-    clearTimeout(timeout);
-    timeout = setTimeout(hideScrollbar, 3000);
-  };
+  function updateButtons() {
+    // Calculate if there's more content to scroll
+    const scrollWidth = container.scrollWidth;
+    const clientWidth = container.clientWidth;
+    const scrollLeft = container.scrollLeft;
+    const maxScroll = scrollWidth - clientWidth;
 
-  // Trigger hide on scroll
-  scrollArea.addEventListener('scroll', resetTimeout);
+    // Left button: show if we can scroll left
+    leftBtn.style.display = scrollLeft > 0 ? 'flex' : 'none';
+    
+    // Right button: show if we can scroll right
+    rightBtn.style.display = scrollLeft < maxScroll ? 'flex' : 'none';
+  }
 
-  // Keep visible while hovering
-  scrollArea.addEventListener('mouseenter', () => {
-    clearTimeout(timeout);
-    scrollArea.classList.add('scrolling');
-  });
+  function scroll(direction) {
+    const scrollAmount = 500;
+    container.scrollBy({
+      left: direction === 'left' ? -scrollAmount : scrollAmount,
+      behavior: 'smooth',
+    });
+  }
 
-  scrollArea.addEventListener('mouseleave', () => {
-    clearTimeout(timeout);
-    timeout = setTimeout(hideScrollbar, 3000);
-  });
+  // Attach click events to buttons
+  leftBtn.addEventListener('click', () => scroll('left'));
+  rightBtn.addEventListener('click', () => scroll('right'));
+
+  // Update button visibility when scrolling
+  container.addEventListener('scroll', updateButtons);
+  
+  // Update button visibility when window resizes
+  window.addEventListener('resize', updateButtons);
+
+  // Initialize button states
+  updateButtons();
 });
-
-// Playlist scroll functionality
-const playlist = document.querySelector('.playlist');
-const scrollLeftBtn = document.getElementById('scroll-left');
-const scrollRightBtn = document.getElementById('scroll-right');
-
-function updateScrollButtons() {
-  const scrollLeft = playlist.scrollLeft;
-  const scrollWidth = playlist.scrollWidth;
-  const clientWidth = playlist.clientWidth;
-
-  // Show/hide left button
-  if (scrollLeft > 0) {
-    scrollLeftBtn.style.display = 'flex';
-  } else {
-    scrollLeftBtn.style.display = 'none';
-  }
-
-  // Show/hide right button
-  if (scrollLeft < scrollWidth - clientWidth - 1) {
-    scrollRightBtn.style.display = 'flex';
-  } else {
-    scrollRightBtn.style.display = 'none';
-  }
-}
-
-function scrollPlaylist(direction) {
-  const scrollAmount = 500; // Adjust scroll amount as needed
-  const currentScroll = playlist.scrollLeft;
-  const targetScroll = direction === 'left'
-    ? currentScroll - scrollAmount
-    : currentScroll + scrollAmount;
-
-  playlist.scrollTo({
-    left: targetScroll,
-    behavior: 'smooth'
-  });
-}
-
-// Event listeners
-scrollLeftBtn.addEventListener('click', () => scrollPlaylist('left'));
-scrollRightBtn.addEventListener('click', () => scrollPlaylist('right'));
-
-// Update buttons on scroll and resize
-playlist.addEventListener('scroll', updateScrollButtons);
-window.addEventListener('resize', updateScrollButtons);
-
-// Initial check
-updateScrollButtons();

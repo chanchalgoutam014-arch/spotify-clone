@@ -25,9 +25,11 @@ body {
   background: linear-gradient(to bottom, #1e1e1e, #121212);
   border-radius: 8px;
 }
-.mid::-webkit-scrollbar{
+
+.mid::-webkit-scrollbar {
   display: none;
 }
+
 .header1 {
   display: flex;
   align-items: center;
@@ -68,9 +70,9 @@ body {
 }
 
 .write::placeholder {
-    font-family: "Inter", sans-serif;
-      letter-spacing: -0.2px;
-      font-weight: 300;
+  font-family: "Inter", sans-serif;
+  letter-spacing: -0.2px;
+  font-weight: 300;
   color: #bebebe;
 }
 
@@ -114,7 +116,7 @@ body {
 }
 
 .options {
-   font-family: "Inter", sans-serif;
+  font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
@@ -133,10 +135,10 @@ body {
 }
 
 .log>button {
-   font-family: "Inter", sans-serif;
+  font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-   letter-spacing: -0.2px;
+  letter-spacing: -0.2px;
   position: absolute;
   left: 92.5%;
   background-color: white;
@@ -155,11 +157,11 @@ body {
   display: flex;
   align-items: center;
   border-radius: 10px;
-    font-family: "Inter", sans-serif;
+  font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-   letter-spacing: -0.2px;
+  letter-spacing: -0.2px;
   margin: 6px;
   font-size: 13px;
   margin-bottom: 5px;
@@ -224,13 +226,13 @@ button:hover {
 }
 
 .header h1 {
-   font-family: "Inter", sans-serif;
+  font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
   font-size: 15px;
   margin-left: 5px;
-  font-weight:bolder;
+  font-weight: bolder;
   color: white;
   letter-spacing: 0.01em;
 }
@@ -242,7 +244,7 @@ button:hover {
   background: #1f1f1f;
   border: none;
   color: var(--text-primary);
-   font-family: "Inter", sans-serif;
+  font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
@@ -272,7 +274,8 @@ button:hover {
 
 /* scrollbar size */
 .scroll-area::-webkit-scrollbar {
-  width: 8px; /* thinner = better */
+  width: 8px;
+  /* thinner = better */
 }
 
 /* track */
@@ -289,16 +292,16 @@ button:hover {
 
 /* show on hover */
 .scroll-area:hover::-webkit-scrollbar-thumb {
-  background-color: rgba(255,255,255,0.4);
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 /* show while scrolling */
 .scroll-area.scrolling::-webkit-scrollbar-thumb {
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .card {
-   letter-spacing: -0.2px;
+  letter-spacing: -0.2px;
   background: var(--card-bg);
   border-radius: 10px;
   padding: 12px 0px 18px 15px;
@@ -313,7 +316,7 @@ button:hover {
 
 .card h2 {
   font-size: 15px;
-   font-family: "Inter", sans-serif;
+  font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
@@ -327,7 +330,7 @@ button:hover {
   color: var(--text-muted);
   margin-bottom: 16px;
   color: white;
-   font-family: "Inter", sans-serif;
+  font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
@@ -339,7 +342,7 @@ button:hover {
   background: white;
   border: 1.5px solid rgb(255, 255, 255);
   color: black;
-   font-family: "Inter", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 13px;
   font-weight: 800;
   padding: 8px 18px;
@@ -357,16 +360,24 @@ button:hover {
 }
 
 .footer {
-  background-color: var(--bg);
   color: #b3b3b3;
   padding: 15px 24px;
   font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
   flex-shrink: 0;
 }
 
+.footer.left-footer {
+  background-color: var(--bg);
+  padding: 15px 24px;
+}
+
+.footer.mid-footer {
+  padding: 30px 40px;
+}
+
 .footer-links {
-    font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
-    letter-spacing: -0.2px;
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: -0.2px;
   display: flex;
   gap: 15px;
   flex-wrap: wrap;
@@ -385,7 +396,7 @@ button:hover {
 }
 
 .footer-title {
-   font-family: "Inter", sans-serif;
+  font-family: "Inter", sans-serif;
   color: #ffffff;
   font-size: 12px;
   margin-top: 15px;
@@ -417,7 +428,7 @@ button:hover {
   font-optical-sizing: auto;
   font-weight: 900;
   font-style: normal;
-    letter-spacing: -0.2px;
+  letter-spacing: -0.2px;
   font-size: 12px;
   margin-top: 22px;
   margin-left: 35px;
@@ -433,17 +444,26 @@ body {
 .playlist {
   display: flex;
   gap: 0px;
-  width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
   padding: 0px 23px;
   box-sizing: border-box;
   flex-wrap: nowrap;
+  scroll-behavior: smooth;
 }
 
 /* hide scrollbar (optional) */
-.playlist::-webkit-scrollbar {
+.section::-webkit-scrollbar {
   display: none;
+}
+
+.section {
+  position: relative;
+}
+
+.section.playlist {
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .scroll-arrow {
@@ -470,15 +490,29 @@ body {
   transform: translateY(-50%) scale(1.1);
 }
 
-
+.scroll-arrow.left-arrow {
+  left: 10px;
+}
 
 .scroll-arrow.right {
   right: 10px;
 }
 
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex-wrap: nowrap;
+  scroll-behavior: smooth;
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
 .playlist .cardlist {
- font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
-    letter-spacing: -0.2px;
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: -0.2px;
   padding: 12px;
   padding-top: 0px;
   /* keep it constant */
@@ -495,6 +529,11 @@ body {
 }
 
 .playlist .cardlist:hover .play-button {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.artists-container .artist-card:hover .play-button {
   opacity: 1;
   transform: translateY(0);
 }
@@ -535,7 +574,8 @@ body {
   margin-left: 4px;
 }
 
-.cardlist, h2 {
+.cardlist,
+h2 {
   color: white;
   font-size: 15px;
   font-weight: 500;
@@ -566,18 +606,21 @@ a {
 .cardlist:hover {
   background-color: #1f1f1f;
 }
-.PA h1{
+
+.PA h1 {
   font-family: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-   letter-spacing: -0.2px;
+  letter-spacing: -0.2px;
   color: rgb(255, 255, 255);
   font-weight: 800;
   font-size: 1.5rem;
   margin-top: 22px;
   margin-left: 35px;
 }
-.PA2 h1{
+
+.PA2 h1 {
   margin-top: 70px;
 }
+
 /* Section */
 .artists-section {
   padding: 20px;
@@ -588,23 +631,32 @@ a {
 }
 
 /* Container */
-.artists-container {
+.artists-container,
+.scroll-container {
   display: flex;
-  overflow-x: auto;   /* enables horizontal scroll */
+  overflow-x: auto;
+  /* enables horizontal scroll */
   padding: 0px 23px;
   gap: 5px;
 }
+
 .artists-container::-webkit-scrollbar {
-  display: none; /* hides scrollbar */
-} 
+  display: none;
+  /* hides scrollbar */
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
+  /* hides scrollbar */
+}
 
 /* Card */
 .artist-card {
   width: 160px;
-  flex: 0 0 auto; 
+  flex: 0 0 auto;
   padding: 15px;
   border-radius: 12px;
-  padding-top: 0px;;
+  padding-top: 0px;
   background: transparent;
   transition: background 0.3s ease;
   position: relative;
@@ -613,10 +665,10 @@ a {
 
 /* Image */
 .artist-card img {
-   width: 106%;
-    height: 68%;
-    object-fit: cover;
-    border-radius: 50%;
+  width: 100%;
+  height: 68%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 /* Text */
@@ -631,7 +683,7 @@ a {
 
 .artist-card p {
   font-family: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
- color: rgb(179, 179, 179);
+  color: rgb(179, 179, 179);
   font-size: 14px;
   font-weight: 400;
   line-height: 1.3;
@@ -644,4 +696,110 @@ a {
 /* Hover Effect */
 .artist-card:hover {
   background: #181818;
+}
+
+.album img {
+  margin-top: 20px;
+}
+
+.mid-footer {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 18px 10px 0;
+
+}
+
+.divider {
+  height: 1px;
+  background: #2a2a2a;
+  margin-bottom: 42px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1.3fr 1.3fr 1.3fr auto;
+  gap: 40px;
+  align-items: start;
+  padding-bottom: 42px;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 14px;
+}
+
+.footer-column a {
+  display: block;
+  text-decoration: none;
+  color: #b3b3b3;
+  font-size: 15px;
+  line-height: 1.9;
+  transition: color 0.2s ease;
+}
+
+.footer-column a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.socials {
+  display: flex;
+  gap: 14px;
+  justify-self: end;
+}
+
+.socials a {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #222326;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.socials a:hover {
+  background: #848484;
+  transform: translateY(-1px);
+}
+
+.socials svg {
+  width: 18px;
+  height: 18px;
+  fill: #ffffff;
+}
+
+.bottom-divider {
+  height: 1px;
+  background: #2a2a2a;
+  margin-bottom: 18px;
+}
+
+.copyright {
+  color: #9b9b9b;
+  font-size: 13px;
+  padding-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .socials {
+    justify-self: start;
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 560px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+a:hover{
+  text-decoration: underline;
 }
